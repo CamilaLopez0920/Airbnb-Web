@@ -1,17 +1,19 @@
-import Header from "./components/Header";
+// dependencies
+import React from 'react';
 
+// components
+import Header from './components/Header';
+import Cards from './components/Cards';
+import { FilterProvider } from './components/FilterContext';
 
-
-
-
-function App() {
-  return (
-   <div ClassName= "App">
-    <Header/>
-   
-   </div>
-  );
-}
+const App = () => {
+	return (
+			<FilterProvider>
+				<Header />
+				<Cards />
+			</FilterProvider>
+	);
+};
 
 export default App;
 

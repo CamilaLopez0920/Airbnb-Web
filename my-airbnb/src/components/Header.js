@@ -1,32 +1,32 @@
-const Header = () => {
-  return (
-    <>
-      <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="#">
-          Book Your Hotel
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+import React from 'react';
+import styled from 'styled-components';
+import Filters from './Filters';
+import FilterText from './FilterText';
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#/register">
-               Register
-                </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/login">
-                Login</a>
-            </li>
-            
-          </ul>
-          
-        </div>
-      </nav>
-    </>
-  );
-}
+
+const HeroContainer = styled.section`
+	margin: 0;
+	padding: 3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #457b9d;
+	text-align: center;
+`;
+
+const Header = () => {
+
+	return (
+		<header>
+			<HeroContainer>
+				<h1>Hoteles</h1>
+				<br />
+				<FilterText/>
+				
+			</HeroContainer>
+			<Filters />
+		</header>
+	);
+};
 
 export default Header;
